@@ -7,6 +7,9 @@
 <div class="page panel panel-default" itemtype="http://schema.org/Article" itemscope>
     <div class="panel-body">
         <h1 class="title margin-bottom-lg" itemprop="headline">{CONTENT.title}</h1>
+		<!-- BEGIN: authorname -->
+		<i>Tác giả : {AUTHOR}</i><br><br>
+		<!-- END: authorname -->
         <div class="hidden hide d-none" itemprop="author" itemtype="http://schema.org/Organization" itemscope>
             <span itemprop="name">{SCHEMA_ORGNAME}</span>
         </div>

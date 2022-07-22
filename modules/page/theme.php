@@ -21,7 +21,7 @@ if (!defined('NV_IS_MOD_PAGE')) {
  * @param string $content_comment
  * @return string
  */
-function nv_page_main($row, $ab_links, $content_comment)
+function nv_page_main($row, $ab_links, $content_comment, $author)
 {
     global $module_name, $lang_module, $lang_global, $module_info, $meta_property, $client_info, $page_config, $global_config;
 
@@ -29,6 +29,12 @@ function nv_page_main($row, $ab_links, $content_comment)
     $xtpl->assign('LANG', $lang_module);
     $xtpl->assign('GLANG', $lang_global);
     $xtpl->assign('CONTENT', $row);
+	
+	if($author['id']) {
+		$authorname = $author['firstname'] . ' ' . $author['lastname'];
+		$xtpl->assign('AUTHOR', $authorname);
+		$xtpl->parse('main.authorname');
+	}
 
     // Khai báo các tham số dữ liệu có cấu trúc
     $xtpl->assign('SCHEMA_ORGNAME', $global_config['site_name']);

@@ -125,7 +125,23 @@ if ($page_config['viewtype'] == 2) {
         $query = 'UPDATE ' . NV_PREFIXLANG . '_' . $module_data . ' SET hitstotal=hitstotal+1 WHERE id=' . $id;
         $db->query($query);
     }
-    $contents = nv_page_main($rowdetail, $other_links, $content_comment);
+	
+	$author_id = $rowdetail['admin_id'];
+	$author = array('firstname' => '',
+					'lastname' => '',
+					'id' => $author_id);
+	if($author_id) {
+		$db_slave->sqlreset()
+				->select('first_name, last_name')
+				->from(NV_USERS_GLOBALTABLE)
+				->where('userid=' . $author_id);
+		$result = $db_slave->query($db_slave->sql());
+		$author_name = $result->fetch();
+		$author['firstname'] = $author_name['first_name'];
+		$author['lastname'] = $author_name['last_name'];
+	}
+	
+    $contents = nv_page_main($rowdetail, $other_links, $content_comment, $author);
 } else {
     // Xem theo danh sách
     if ($page > 1) {
