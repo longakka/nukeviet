@@ -29,7 +29,8 @@
         "psr-4" : {
             "NukeViet\\" : "vendor/vinades/nukeviet",
             "NukeViet\\Api\\" : "includes/api",
-            "NukeViet\\Module\\" : "modules"
+            "NukeViet\\Module\\" : "modules",
+            "Modules\\": "modules"
         },
         "classmap" : [
             "vendor/vinades/pclzip/pclzip.lib.php"
@@ -46,6 +47,7 @@
         "tecnickcom/tc-lib-barcode" : "^1.15",
         "symfony/polyfill-mbstring": "<1.19.0",
         "true/punycode" : "^2.1",
-        "phpmailer/phpmailer": "^6.6"
+        "phpmailer/phpmailer": "^6.6",
+        "opencage/geocode": "^3.1"
     }
 }

@@ -1,0 +1,30 @@
+.minw200 {
+    min-width: 200px!important;
+}
+
+.text-nowrap {
+    white-space: nowrap!important;
+}
+
+.mb-2 {
+    margin-bottom: 10px!important;
+}
+
+.ui-datepicker {
+    z-index: 999999!important;
+}
+
+table.table th > [type="checkbox"],
+table.table td > [type="checkbox"] {
+    margin-right: 0;
+}
+
+.breadcrumb-catnav {
+    font-size: 13px;
+    line-height: 1.2em;
+    background-color: #f5f5f5;
+    padding: 8px 15px;
+    display: block;
+    border: 1px solid #e1e1e8;
+    border-radius: 0;
+}

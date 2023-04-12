@@ -1,0 +1,3 @@
+21 21 * * * php /home/vinades/private/check-not-checkout.php
+30 12 * * * php /home/vinades/private/checkout-member.php
+0 7 * * * php /home/vinades/private/work-check.php
